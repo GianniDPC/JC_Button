@@ -10,7 +10,7 @@
 /-----------------------------------------------------------------------*/
 void Button::begin()
 {
-    pinMode(m_pin, m_puEnable ? INPUT_PULLUP : INPUT);
+    pinMode(m_pin, m_pMode);
     m_state = digitalRead(m_pin);
     if (m_invert) m_state = !m_state;
     m_time = millis();
